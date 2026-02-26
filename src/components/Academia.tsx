@@ -6,25 +6,22 @@ import { toast } from '@/components/ui/use-toast';
 const Academia: React.FC = () => {
   const courses = [
     {
-      title: 'TOTVS RM - Fundamentos',
-      type: 'Gratuito',
-      duration: '8 horas',
-      students: '1.2k',
-      image: 'Estudantes assistindo curso online de TOTVS RM em laptop moderno',
-    },
-    {
-      title: 'Customização Avançada',
-      type: 'Pago',
-      duration: '24 horas',
-      students: '856',
-      image: 'Desenvolvedor programando customizações em sistema TOTVS',
-    },
-    {
-      title: 'Gestão de Processos',
+      title: 'TOTVS RM - Experiência de Utilização (Usuário)',
       type: 'Pago',
       duration: '16 horas',
-      students: '643',
-      image: 'Profissional analisando processos empresariais em dashboard',
+      image: 'Estudantes assistindo curso online de TOTVS RM',
+    },
+    {
+      title: 'TOTVS RM - Fórmulas',
+      type: 'Pago',
+      duration: '16 horas',
+      image: 'Desenvolvedor criando fórmulas no TOTVS RM',
+    },
+    {
+      title: 'TOTVS RM - Fórmulas Visuais',
+      type: 'Pago',
+      duration: '40 horas',
+      image: 'Analista desenvolvendo fórmulas visuais complexas',
     },
   ];
 
@@ -88,7 +85,7 @@ const Academia: React.FC = () => {
                     </div>
                     <div className="flex items-center space-x-1">
                       <Award className="w-4 h-4" />
-                      <span>{course.students} alunos</span>
+                      <span>EM BREVE</span>
                     </div>
                   </div>
                 </div>
