@@ -19,6 +19,11 @@ echo.
 echo Realizando commit...
 git commit -m "%commitMsg%"
 
+:: Baixa alteracoes remotas antes de enviar
+echo.
+echo Baixando atualizacoes do servidor...
+git pull origin main
+
 :: Envia para o repositorio remoto
 echo.
 echo Enviando para o GitHub...
