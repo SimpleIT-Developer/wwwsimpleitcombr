@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare, Users, TrendingUp, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/components/ui/use-toast';
-import { fetchLatestTopics, DiscourseTopic } from '@/services/discourseApi';
+// import { fetchLatestTopics, type DiscourseTopic } from '@/services/discourseApi';
 
 const Forum: React.FC = () => {
-  const [topics, setTopics] = useState<DiscourseTopic[]>([]);
-  const [loading, setLoading] = useState(false);
+  // const [topics, setTopics] = useState<DiscourseTopic[]>([]);
+  // const [loading, setLoading] = useState(false);
 
   // Exemplo de como carregaríamos os tópicos reais
-  useEffect(() => {
-    const loadTopics = async () => {
-      setLoading(true);
-      // Descomente a linha abaixo para testar a integração simulada:
-      // const data = await fetchLatestTopics();
-      // setTopics(data);
-      setLoading(false);
-    };
+  // useEffect(() => {
+  //   const loadTopics = async () => {
+  //     setLoading(true);
+  //     // Descomente a linha abaixo para testar a integração simulada:
+  //     // const data = await fetchLatestTopics();
+  //     // setTopics(data);
+  //     setLoading(false);
+  //   };
     
-    // loadTopics(); // Mantido desativado por enquanto
-  }, []);
+  //   loadTopics(); 
+  // }, []);
   const stats = [
     { icon: Users, value: 'Em Breve', label: 'Membros Ativos' },
     { icon: MessageSquare, value: 'Em Breve', label: 'Discussões' },

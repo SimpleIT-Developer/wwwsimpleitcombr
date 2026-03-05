@@ -60,8 +60,8 @@ export interface DiscourseLatestTopicsResponse {
 }
 
 // Configuração da API (substituir pela URL real do seu fórum quando criado)
-const DISCOURSE_BASE_URL = 'https://forum.simpleit.app.br'; // Exemplo
-const API_USERNAME = 'system'; // Usuário para autenticação (se necessário)
+// const DISCOURSE_BASE_URL = 'https://forum.simpleit.app.br'; // Exemplo
+// const API_USERNAME = 'system'; // Usuário para autenticação (se necessário)
 // const API_KEY = 'YOUR_API_KEY'; // Chave de API (para operações protegidas)
 
 /**
