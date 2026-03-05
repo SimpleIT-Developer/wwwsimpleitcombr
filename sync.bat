@@ -22,12 +22,35 @@ git commit -m "%commitMsg%"
 :: Baixa alteracoes remotas antes de enviar
 echo.
 echo Baixando atualizacoes do servidor...
-git pull origin main
+git pull origin main --no-edit
+
+:: Verifica se houve erro no pull
+if %errorlevel% neq 0 (
+    echo.
+    echo ==========================================
+    echo ERRO: Falha ao baixar atualizacoes.
+    echo Resolva os conflitos manualmente antes de enviar.
+    echo ==========================================
+    pause
+    exit /b %errorlevel%
+)
 
 :: Envia para o repositorio remoto
 echo.
 echo Enviando para o GitHub...
 git push origin main
+
+:: Verifica se houve erro no push
+if %errorlevel% neq 0 (
+    echo.
+    echo ==========================================
+    echo ERRO: Falha ao enviar para o GitHub.
+    echo Verifique sua conexao ou permissoes.
+    echo Tente 'git push origin main' manualmente para ver o erro.
+    echo ==========================================
+    pause
+    exit /b %errorlevel%
+)
 
 echo.
 echo ==========================================
